@@ -14,4 +14,17 @@ use yii\web\Controller;
 class BaseController extends Controller
 {
 
+    public function init()
+    {
+        parent::init();
+    }
+
+    public function userMainLayout(){
+        $this->layout = "main";
+    }
+
+    public function useIndexLayout(){
+        $this->layout = "index";
+    }
+
 }

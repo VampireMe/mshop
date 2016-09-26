@@ -4,10 +4,15 @@ namespace app\controllers;
 
 class IndexController extends BaseController
 {
+    public function init()
+    {
+        parent::init();
+
+        $this->useIndexLayout();
+    }
+
     public function actionIndex()
     {
-        //$this->layout = false;
-        //return $this->render("index");
-        return $this->renderPartial("index");
+        return $this->render("index");
     }
 }
