@@ -1,23 +1,13 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: gaoqing
- * Date: 9/26/16
- * Time: 7:45 AM
- */
-
 namespace app\controllers;
 
 
-use yii\web\Controller;
-
-class IndexController extends Controller
+class IndexController extends BaseController
 {
-
-    public function actionIndex(){
-
-        $params = [];
-        return $this->render('index', $params);
+    public function actionIndex()
+    {
+        //$this->layout = false;
+        //return $this->render("index");
+        return $this->renderPartial("index");
     }
-
 }
