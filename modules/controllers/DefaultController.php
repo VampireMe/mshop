@@ -2,13 +2,19 @@
 
 namespace app\modules\controllers;
 
-use yii\web\Controller;
 
 /**
  * Default controller for the `admin` module
  */
-class DefaultController extends Controller
+class DefaultController extends BaseController
 {
+    public function init()
+    {
+        parent::init();
+
+        $this->userCommonLayout();
+    }
+
     /**
      * Renders the index view for the module
      * @return string
