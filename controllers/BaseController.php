@@ -19,8 +19,8 @@ class BaseController extends Controller
         parent::init();
     }
 
-    public function userMainLayout(){
-        $this->layout = "main";
+    public function userCommonLayout(){
+        $this->layout = "common";
     }
 
     public function useIndexLayout(){

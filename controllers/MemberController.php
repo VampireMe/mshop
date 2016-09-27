@@ -7,7 +7,7 @@ class MemberController extends BaseController
     {
         parent::init();
 
-        $this->userMainLayout();
+        $this->userCommonLayout();
     }
 
     public function actionAuth()

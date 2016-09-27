@@ -8,7 +8,7 @@ class ProductController extends BaseController
     {
         parent::init();
 
-        $this->userMainLayout();
+        $this->userCommonLayout();
     }
 
     public function actionIndex()
