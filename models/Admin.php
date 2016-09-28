@@ -11,6 +11,7 @@ namespace app\models;
 
 class Admin extends BaseModel
 {
+    public $rememberMe = true;
     public static function tableName()
     {
         return '{{%admin}}';
