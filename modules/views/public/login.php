@@ -1,5 +1,7 @@
 <?php
-use \yii\bootstrap\ActiveForm;
+use yii\bootstrap\ActiveForm;
+use yii\helpers\Url;
+use yii\helpers\Html;
 ?>
 <!DOCTYPE html>
 <html class="login-bg">
@@ -34,11 +36,14 @@ use \yii\bootstrap\ActiveForm;
 
 
     <div class="row-fluid login-wrapper">
-        <a class="brand" href="index.html"></a>
+        <?php echo Html::a('', Url::to(['index/index']), ["class" => "brand"]); ?>
 
         <?php
           $form = ActiveForm::begin([
-              'fieldConfig' => ['template' => '{input}']
+              'id' => 'mform',
+              'action' => Url::to(['public/login']),
+              'method' => 'POST',
+              'fieldConfig' => ['template' => '{error}{input}']
           ]);
         ?>
         <div class="span4 box">
