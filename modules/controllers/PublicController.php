@@ -19,6 +19,12 @@ class PublicController extends BaseController
         $this->layout = false;
     }
 
+    public function actionSeekpassword(){
+        $model = new Admin();
+
+        return $this->render('seekpassword', ['model' => $model]);
+    }
+
     public function actionLogout(){
         $session = \Yii::$app->session;
         $session->remove('admin');
